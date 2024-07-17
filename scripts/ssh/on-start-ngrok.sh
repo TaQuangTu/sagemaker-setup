@@ -50,7 +50,6 @@ if [[ -z "$TUNNEL_URL" ]]; then
     echo "Failed to set up SSH with ngrok"
     echo "ngrok logs:"
     cat "$NGROK_LOG"
-    exit 1
 fi
 
 echo "SSH address: $TUNNEL_URL"
