@@ -23,6 +23,7 @@ tunnels:
   ssh:
     proto: tcp
     addr: 22
+    remote_addr: $NGROK_REMOTE_ADDR
 version: 2
 EOF
 chown -R ec2-user:ec2-user "$NGROK_DIR"
