@@ -23,7 +23,6 @@ tunnels:
   ssh:
     proto: tcp
     addr: 22
-    remote_addr: $NGROK_REMOTE_ADDR
 version: 2
 EOF
 chown -R ec2-user:ec2-user "$NGROK_DIR"
@@ -50,7 +49,6 @@ if [[ -z "$TUNNEL_URL" ]]; then
     echo "Failed to set up SSH with ngrok"
     echo "ngrok logs:"
     cat "$NGROK_LOG"
-    exit 1
 fi
 
 echo "SSH address: $TUNNEL_URL"
